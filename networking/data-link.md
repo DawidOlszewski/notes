@@ -13,13 +13,13 @@
 
 
 ### one cable topology
-![one-cable-topology](one-cable-topology.png)
+![one-cable-topology](./imgs/data-link/one-cable-topology.png)
 * one computer sends frame and everyone recives it
 * two computers sends simultaniously -> noone recives msg
 
 
 ### hub topology (better)
-![hub-topology](hub-topology.png)
+![hub-topology](./imgs/data-link/hub-topology.png)
 
 
 ## CSMA/CD - collisiion detection 
