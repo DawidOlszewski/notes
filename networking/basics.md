@@ -116,3 +116,6 @@ obtaining properties :  `ethtool enp0s3`
 
 > [!NOTE]
 > `iperf3` commonly works on port 5201
+>
+# ping
+if intermediate router doesn't know where to send ping packet, it sends `Destination host unreachable` packet to sender
