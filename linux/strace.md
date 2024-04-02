@@ -20,4 +20,6 @@ what system calls process is using
 
 **snd**:
 
-    read NANOPID R <<< $(ps -ao pid,command | grep "nano");echo $NANOPID;strace -e write -p $NANOPID
+    read NANOPID R <<< $(ps -ao pid,command | grep "nano")
+    #echo $NANOPID
+    strace -e write -p $NANOPID

@@ -25,13 +25,13 @@ retq:
 * zdejmuje ze stosu addres następnej instucki po callq
 * skacze w to miejsce
 * w szczególności mógłby być to problem ponieważ wieszkni element stosu mógłby nie być kodem powrotu
-![procedure-data-flow](proc-data-flow.png)
+![procedure-data-flow](./imgs/stack/proc-data-flow.png)
 
 ### stack frame
 
 `%rbp` referneces to `previous stackframe %rbp`
 
-![stack-frame](stack-frame.png)
+![stack-frame](./imgs/stack/stack-frame.png)
 
 > [!NOTE]
 > `leave` instruction:\
@@ -53,8 +53,8 @@ retq:
   * saves temporary value in its frame before using
   * restores them before returning to caller
 
-![caller-saved](caller-saved.png)
-![callee-saved](callee-saved.png)
+![caller-saved](./imgs/stack/caller-saved.png)
+![callee-saved](./imgs/stack/callee-saved.png)
 
 
 

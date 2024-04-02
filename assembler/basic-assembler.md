@@ -99,9 +99,8 @@ binary - object
 
 binary - executable
 
-![alt text](qlwb.png)
+![qlwb](./imgs/basic-assembler/qlwb.png)
 
-![alt text](image.png)
 
 > [!NOTE]
 > Memory is addresed by bytes
