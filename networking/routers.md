@@ -2,11 +2,33 @@
 
 ## OSPF vs RIP - dynamic routing protocols
 
-`OSPF` is a `link-state` protocol, which means that computers in the same network know the whole connection graph (neighbours of each computer), therefore they are able to locally find the best route to any computer
+`OSPF` (open shortest path first) is a `link-state` protocol, which means that computers in the same network know the whole connection graph (neighbours of each computer), therefore they are able to locally find the best route to any computer
 
-`RIP` is a `distance-vector` routing algorithm which means that each router knows only the **probable** distance to each computer connected to the network. Therefore, is more prone to chosing inefficent route
+`RIP` (routing information protocol) is a `distance-vector` routing algorithm which means that each router knows only the **probable** distance to each computer connected to the network. Therefore, is more prone to chosing inefficent route
 
-### How to set 
+## How to use `frr` 
+
+You have to start dameon called `frr` (free range routing)
+
+* `vtysh` opens special `frr` terminal
+  * `show interface`
+  * `show ip route`
+  * `configure terminal` command in `vtysh` changes terminal to `configuration mode`
+  * `show running-config` *TODO: where are these file* 
+  * `copy running-config startup-config` - saving temp configureation
+
+
+## How to set RIP in `frr` 
+
+you would have to change `/etc/frr/daemons` by setting `ripd=yes` 
+
+```
+virbian(config)# router rip
+virbian(config-router)# version 2
+virbian(config-router)# network 192.168.1.0/24
+virbian(config-router)# network 192.168.2.0/24
+```
+
 
 ## what happening inside a router
 
@@ -46,3 +68,7 @@
 
 Cental layers of internet are able to uses ipv6, but routers near our home devices are not. Therefore there exists `ip tunneling 6in4`.
 Which means sending ipv6 inside ipv4. On the path exists a device called `tunnel broker` which decapsulates ipv4 and resend its content which is packet with ipv6. 
+
+
+# ping
+if intermediate router doesn't know where to send ping packet, it sends `Destination host unreachable` packet to sender

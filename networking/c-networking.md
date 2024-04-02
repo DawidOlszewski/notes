@@ -9,7 +9,7 @@ type subtype
 
 ### jak będzię błąd errno -> komunikat strerror  
 
-![socket-creation](socket-creation.png)
+![socket-creation](./imgs/c-networking/socket-creation.png)
 
 gniazdo odbiera wszystkie pakiety do nigo wysłane
 
