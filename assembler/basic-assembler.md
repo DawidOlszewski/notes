@@ -48,6 +48,8 @@ D - offset {1,2,4}
 let put a `int32_t` to a memory: `0x12345678`
 
 > it only revelant when storing multipbyte quantity
+
+intel 0x86-64 uses little endian adressing
    
 | address | little endian | big endian |
 | ------- | ------------- | ---------- |
@@ -96,3 +98,10 @@ binary - object
 > linking -consolidar
 
 binary - executable
+
+![alt text](qlwb.png)
+
+![alt text](image.png)
+
+> [!NOTE]
+> Memory is addresed by bytes

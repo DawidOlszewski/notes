@@ -51,8 +51,10 @@ ISP - internet service provider
 
 `host -t a example.org` -DNS CLIENT with (t)ype of record
 
+`traceroute -A example.org` - additional info about each consecutive AS number that can be used with whois
+
 ### dns flow
-![dns-flow](./dns.png)
+![dns-flow](./imgs/basic/dns.png)
 
 
 ### dns query types
@@ -93,12 +95,14 @@ prints active network devices with lots of addition info about active ports, eth
 `netstat -l46n` - prints active listning services\
 `netstat -l46` - prints active listning serices but with service using /etc/services
 
+`sudo netstat -tulpn` l - listning, p- program, n -numeric
+
 
 > [!NOTE]
-> /etc/services is a mapping between protocols names and its TCP/UDP ports
+> `/etc/services` is a mapping between protocols names and its TCP/UDP ports
 
 > [!NOTE]
-> /etc/hosts is a "local dns file" each records look like `127.0.1.1    virbian`
+> `/etc/hosts` is a "local dns file" each records look like `127.0.1.1    virbian`
 
 
 # ethtool
