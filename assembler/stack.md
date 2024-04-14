@@ -18,13 +18,23 @@
 `%rbp` - `początek rekordu aktywacji procedury/ stack frame` 
 
 callq addr:
-* pushuje na stos adress następnej instukcji (występującej po `callq` w kodzie) (upgrraduje index stosu `rsp`, i addres aktualnej instuckji `%rip?`)
+* pushuje na stos adress następnej instukcji (występującej po `callq` w kodzie), pushuje rbp poprzedniej ramki
 * skacze w miejsce addr
+
+> [!NOTE]
+> aby móc pamiętać `%rbp` swojej oraz poprzedniej ramki - powiniśmy ją zapisać poprzednie `%rbp` na stosie. Jest za to odpowiedzialny `callee`. Wtedy wracając z funckji zostanie wykonana sekwencja:\
+> `movq %rbp, %rsp`\
+> `movq %rbp`\
+> `retq`
+>
+> co jest równoważne:\
+> `leave; retq;`
 
 retq:
 * zdejmuje ze stosu addres następnej instucki po callq
 * skacze w to miejsce
 * w szczególności mógłby być to problem ponieważ wieszkni element stosu mógłby nie być kodem powrotu
+* popuje poprzedni `rbp` i wrzuca go do `rsp`
 ![procedure-data-flow](./imgs/stack/proc-data-flow.png)
 
 ### stack frame
@@ -32,6 +42,7 @@ retq:
 `%rbp` referneces to `previous stackframe %rbp`
 
 ![stack-frame](./imgs/stack/stack-frame.png)
+![stack-frame-2](./imgs/stack/stack-frame-abi.png)
 
 > [!NOTE]
 > `leave` instruction:\

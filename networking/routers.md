@@ -111,6 +111,9 @@ it's flow looks like this:
 * understands ip protocol
 
 
+### icmp redirect TODO:
+
+
 ### domains TODO:
 domena kolizyjna 
 domena rozgłoszeniowa

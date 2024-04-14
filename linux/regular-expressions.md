@@ -18,9 +18,9 @@ If content of line matches, it will be printed on screen
 * `grep -R` changes mode to recursive
 * `grep -i` Ignore case 
 * `grep -c` counts matched lines
-* `grep -n` counts matched lines
+* `grep -n` counts matched lines or add line number when found
 * `grep -H` adds filename in the prefix `file.txt: sth`
-
+* `grep -w` looks for word
 ### patterns:
 Certain characters, called `metacharacters`, have special meaning and must be escaped (usually with \ if you want to use them as characters). In most syntaxes the metacharacters are:
     `(   )   [   ]  {   }   ^   $   .   \   ?   *   +   |`

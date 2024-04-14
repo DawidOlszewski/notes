@@ -79,4 +79,23 @@ during compilation from C to assembly - compiler changes for loops to while, do 
 > `jmp foo` direct
 
 `cqto` extends %rax to rdx:rax (signed) 
- 
+
+>[!NOTE]
+>there exists something called indirect jumps:\
+>every indirect jump has to have an asterix (**\***) before jump address
+>
+>* `jmp %rax` - doesn't work
+>* `jmp *%rax` - work
+>
+> ass msg:\
+> ![indirect-jump-asterix](./imgs/stack/indirect-jump-asterix.png)
+>
+>###  example of indirect jump
+>
+>```
+>int foo(void (*f)(void))
+>{
+>    f();
+>}
+>```
+

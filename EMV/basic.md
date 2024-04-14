@@ -54,3 +54,21 @@ swift
 
 ## The specific features defined by EMVCo that achieve the protections and controls to reduce counterfeit and lost and stolen card fraud
 
+##
+
+## what details are capturedin in creadit card application
+* application channels:
+  * phisical
+  * internet chanells:
+    * agent verifies a aplicant
+
+* details captured
+  *  demo graphic & identity
+     *  mobile number, emplyment details, name, number
+     *  financial infromation
+     *  dependent information
+        *  memers of family
+* backend steps
+  * 
+
+## what happends on a backend part
