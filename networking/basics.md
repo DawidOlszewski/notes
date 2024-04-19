@@ -109,8 +109,8 @@ target
 
 
 
-# telnet 
-allows plain communication in http
+# telnet host port
+allows plain communication in tcp
 
 # netstat
 prints active network devices with lots of addition info about active ports, ethernet stats, ipv4 stats (ip, icmp, tcp , udp)
