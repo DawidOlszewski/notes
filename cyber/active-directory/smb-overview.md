@@ -42,10 +42,10 @@ MUP - `multiple UNC provider` is a kernel-mode component (a drvier mup.sys) resp
 * **tcp session** - handshake
 * **negotiate protocol** - both parts need to agree on SMB version
   * client - sends request with all smb version manned
-    ![negotiatoin request](./imgs/smb-overview/neg-req.png)
+    ![negotiatoin request](imgs/smb-overview/neg-req.png)
   * server - chooses one of them
     sends also sessionId=0, treeId=0, because SMB session was not established yet
-    ![neg-res](./imgs/smb-overview/neg-res.png)
+    ![neg-res](imgs/smb-overview/neg-res.png)
     > [!NOTE]
     You may be pondering about the Process Id field, well it’s not the process that started this connection. Microsoft may have planned it to be but in reality it will always be a random blob or a plain old 0.\
 * **session setup** - client need to authenticate itself to the server
@@ -63,18 +63,22 @@ MUP - `multiple UNC provider` is a kernel-mode component (a drvier mup.sys) resp
   * also `NT token` 
   * we can authoirze thorugh `Spengo` (`Simple Protected Negotiation`) which is a protocol wrapper which orchastrastes other protcols (e.g. kerberos)
   * req:
-    ![alt text](image-1.png)
+    ![alt text](imgs/smb-overview/session-req.png)
   * res (with session id):
-    ![alt text](image-2.png)
+    ![alt text](imgs/smb-overview/session-res.png)
 * **Tree Connect** - we have to specify which share we want
   * by def it `$IPC`
   * req:
-    ![tree-req](image-3.png)
+    ![tree-req](imgs/smb-overview/tree-req.png)
   * res:
-  * ![tree-res](image-4.png)
+  * ![tree-res](imgs/smb-overview/tree-res.png)
     * `tree-id` from server side is mapped to our session
     * `access-mask` - tells about access rights
-    ![access-mask](./imgs/smb-overview/access-mask.png)
+    ![access-mask](imgs/smb-overview/access-mask.png)
 * **File operations**
-  * ![alt text](image-5.png)
+  * ![file-operations](imgs/smb-overview/file-operation.png)
 
+WHAT is a sysvol
+NETLOGON
+User Shares 
+ZZZ_archive
