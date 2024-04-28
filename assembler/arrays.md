@@ -34,3 +34,6 @@ takes the minimum primituve subtypre recursively, tells
 > every type has to start at some multiplicity of its size. For example int can be only at positions divisible by 4\
 > the padding in the end of some stucter has to be aligned to the max of alignof its variables
 
+# common quirks
+
+`movslq` - 
