@@ -12,7 +12,7 @@
 > **e.g. :**
 > ```
 > char *p;
-> cout << p[100]
+> cout << p[100];
 > ```
 
 > [!NOTE]
@@ -68,12 +68,6 @@ Memory reference bug example
 > [!NOTE]
 > exists also buffer underflow, but it is harder to execute beacuse commonly retur address is above arrays
 
-
-> [!NOTE]
-> TODO:?
-> stack grows up and right
-> once again:\ 
-> **why little endian?**
 
 how to avoid attacks:
 * `gets` -> `fgets`
