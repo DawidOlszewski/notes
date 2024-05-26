@@ -4,6 +4,9 @@ if sth has set cwd on some file it cannot be deleted`
 
 prints process and users that use some file\
 option: -ki
-    fuser -v $(which bash) 
-    fuser -n tcp /
+
+```bash
+fuser -v $(which bash) 
+fuser -n tcp /
+```
 
