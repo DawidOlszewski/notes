@@ -30,6 +30,7 @@
 > `nm` print symbols from object files
 > `readelf main.o`
 
+
 > [!NOTE]
 > `objdump -dr main.o`
 
@@ -60,7 +61,7 @@ We have 3 types of ELF files:
 
 > [!NOTE]
 > co robi `static`:
-> dotyczy tylko jednej jednostki translacji
+> dotyczy tylko jednej i tworzy zmienne lokalne niezmienne 
 
 ## how linker resolves duplicate symbol definitions
 
@@ -71,3 +72,15 @@ We have 3 types of ELF files:
 ### conclusion - consolidator is stupied
 
 ![alt text](./imgs/consolidation/global-vars.png)
+
+
+> [!NOTE]
+> `.strtab` - section (l) that consists of symbol names
+> `.shrstrtab` -section that consists of names of all sectoin headers
+> readelf 
+> `readelf -s main.o` TODOL:
+> `readelf -t main.o` TODOL:
+
+
+> ogarnij o co chodzi z tyma minem 
+> `readlf -h -l`
