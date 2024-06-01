@@ -22,7 +22,7 @@ You have to start dameon called `frr` (free range routing)
 
 you would have to change `/etc/frr/daemons` by setting `ripd=yes` 
 
-```
+```bash
 virbian(config)# router rip
 virbian(config-router)# version 2
 virbian(config-router)# network 192.168.1.0/24

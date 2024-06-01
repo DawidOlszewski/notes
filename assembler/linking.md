@@ -58,29 +58,16 @@ We have 3 types of ELF files:
 > each section has `.rel` prefix
 
 
-
-> [!NOTE]
-> co robi `static`:
-> dotyczy tylko jednej i tworzy zmienne lokalne niezmienne 
-
 ## how linker resolves duplicate symbol definitions
 
-![alt text](./imgs/consolidation/duplicate-symbol.png)
-![alt text](./imgs/consolidation/linker-rules.png)
+![duplicate-symbol](./imgs/consolidation/duplicate-symbol.png)
+![linker-rules](./imgs/consolidation/linker-rules.png)
 
 
-### conclusion - consolidator is stupied
+### conclusion - consolidator is stupied (it useful but its not smart)
+[linker-is-not-a-magical-program](https://97-things-every-x-should-know.gitbooks.io/97-things-every-programmer-should-know/content/en/thing_53/)
+> A linker is a very stupid, pedestrian, straightforward program. All it does is concatenate together the code and data sections of the object files, connect the references to symbols with their definitions, pull unresolved symbols out of the library, and write out an executable. That's it. No spells! No magic! The tedium in writing a linker is usually all about decoding and generating the usually ridiculously overcomplicated file formats, but that doesn't change the essential nature of a linker.
 
 ![alt text](./imgs/consolidation/global-vars.png)
 
 
-> [!NOTE]
-> `.strtab` - section (l) that consists of symbol names
-> `.shrstrtab` -section that consists of names of all sectoin headers
-> readelf 
-> `readelf -s main.o` TODOL:
-> `readelf -t main.o` TODOL:
-
-
-> ogarnij o co chodzi z tyma minem 
-> `readlf -h -l`
