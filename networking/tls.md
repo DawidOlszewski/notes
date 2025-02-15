@@ -130,6 +130,16 @@ default_md        = sha256              # Default digest algorithm to sign certs
 
 ``` 
 
-# What critical field means besides semanthic
+# cheatsheet
+1. print everything about this certificate:
+`openssl x509 -in mail.pem -noout -text`
+
+2. create the easiest self-signed certificate: `openssl req -x509 -newkey rsa:4096 -keyout /etc/ssl/private/mail.key -out /etc/ssl/certs/mail.pem -days 365 -nodes`
+
+3. print cert from some site: `openssl s_client -connect mail.example.com:993 -showcerts | openssl x509 -noout -text`
+
+
+
+# what critical field means besides semanthic
 
 if some extension with critical field cannot be understood by the system, the whole certifacte is rejected

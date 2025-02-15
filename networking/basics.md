@@ -33,6 +33,14 @@
 > additionaly route table for specific interface will be accessible iff interface is set up
 
 > [!NOTE]
+> so why do we even have a possibility to assign adress to a specific interface without a mask.
+> let's imagine, that we want to redirect some packages (to specific network **1.0.1.0/24**) to specific interface. This interface is not network **1.0.1.0** we can use:
+> 1. `ip addr add 1.0.1.0 dev enp0s3`
+> 2. `ip route add 192.1.0.1/30 via 1.0.1.0`
+> without rerouting packets to **1.0.1.0/30** subnet
+> for example
+
+> [!NOTE]
 > common name for ethernet interface is enp#s#f#, which stands for:
 >```
 >en = ethernet
